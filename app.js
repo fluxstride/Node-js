@@ -6,6 +6,7 @@ const server = http.createServer((req,res)=>{
    fs.readFile('./index.html','UTF8',(err,html)=>{
 	   if (err) throw err;
 	   res.write(html);
+	  // res.write(`<p>${req.url}</p>`);
 	   res.end();
    })
   
